@@ -1,0 +1,21 @@
+<div class="div1">
+    <input type="text" [(ngModel)]="user_name"/>
+    {{user_name}}
+    ready: <input type="checkbox" [(ngModel)]="isChecked"/>
+    <p>{{isChecked ? 'checkbox checked' : 'checkbox is unchecked'}}</p>
+
+  <select [(ngModel)]="favoriteColor">
+        <option *ngFor = 'let color of colors'>{{color}}</option>
+    </select>
+    <p>your fav color is:{{favoriteColor}}</p>
+  <button (click)="increase()">+</button>
+  {{counterValue}}
+  <button (click)="decrease()">-</button>
+
+  <form>
+    <input type="text" name="firstName" [(ngModel)]="user.firstName"/>
+    <input type="text" name="lastName" [(ngModel)]="user.lastName"/>
+
+<p>full Name: {{user.firstName}} {{user.lastName}}</p>
+  </form>
+</div>

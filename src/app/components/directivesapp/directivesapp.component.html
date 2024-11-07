@@ -1,0 +1,16 @@
+<div *ngIf="isvisible">
+    <p>this statement is visible </p>
+</div>
+<div *ngFor="let color of colors">
+   <p>{{color}}</p> 
+</div>
+<div>
+    <div [ngSwitch]="viewmode">
+        <div *ngSwitchCase="'map'">Map View</div>
+        <div *ngSwitchCase="'list'">list View</div>
+        <div *ngSwitchDefault>select a view</div>
+
+    </div>
+</div>
+<div [ngClass]="{ 'active': isActive, 'disabled': !isActive }">Status</div>
+
